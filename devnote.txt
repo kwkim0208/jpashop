@@ -1,0 +1,2 @@
+정적 페이지는 /resource/static 아래에 저장
+동적 페이지는 /resource/templates 에 저장
