@@ -23,4 +23,3 @@ public class Member {
     //일기전용
     private List<Order> orders = new ArrayList<>();
 }
-

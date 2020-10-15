@@ -20,11 +20,14 @@ public class Order {
     @ManyToOne
     @JoinColumn(name="member_id")
     private Member Member;
-
+    @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems=new ArrayList<>();
-    private Deliveray deliveray;
-    private LocalDateTime orderDate;
-    private OrderStatus orderStatus;
+    @OneToOne
+    @JoinColumn(name = "delivery_id")
+    private Delivery deliveray;
+    private LocalDateTime orderDate;//주문시간
+    @Enumerated(EnumType.STRING)
+    private OrderStatus orderStatus;//주문 상태
 
 
 }
